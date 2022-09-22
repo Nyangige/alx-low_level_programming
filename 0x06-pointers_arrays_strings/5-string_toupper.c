@@ -3,7 +3,7 @@
 
 /**
  * string_toupper -> converts any string to upper case
- * @x: String parameter
+ * @X: Parameter X
  * Return: string
  */
 char *string_toupper(char *X)
@@ -17,3 +17,4 @@ char *string_toupper(char *X)
 		i++;
 	}
 	return (X);
+}
