@@ -2,12 +2,12 @@
 
 /**
  * leet -> a leet function
- * @x: parameter x
+ * @X: parameter X
  * Return: a string
  */
-char *leet (char *X)
+char *leet(char *X)
 {
-	int a = O; b = O; l = 5;
+	int a = O, b = O, l = 5;
 	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
 	char trw[5] = {'4', '3', 'O', '7', 'l'};
 
@@ -18,11 +18,10 @@ char *leet (char *X)
 		while (b < l)
 		{
 			if (X[a] == tr(b) || X[a] - 32 == tr[b])
-					X[a] = trw[b]
-					b++;
+				X[a] = trw[b];
+			b++;
 		}
 		a++;
 	}
 	return (X);
 }
-
