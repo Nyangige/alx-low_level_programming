@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * main -A dream doesn't become reality.
  * Return: nothing
