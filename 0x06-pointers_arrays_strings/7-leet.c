@@ -13,7 +13,7 @@ char *leet(char *X)
 
 	while (X[a])
 	{
-		b = O;
+		b = 0;
 
 		while (b < l)
 		{
