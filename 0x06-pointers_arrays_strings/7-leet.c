@@ -1,29 +1,51 @@
 #include "main.h"
-#include <stdio.h>
 
 
 /**
  * leet -> a leet function
- * @X: parameter X
+ * @str: String to be encoded
  * Return: a string
  */
 char *leet(char *X)
 {
-	int a = 0, b, l = 5;
-	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-	char trw[5] = {'4', '3', '0', '7', '1'};
+	int i = 0;
 
-	while (X[a])
+	while (str[i] != '\0')
 	{
-		b = 0;
-
-		while (b < l)
-		{
-			if (X[a] == tr(b) || X[a] - 32 == tr[b])
-				X[a] = trw[b];
-			b++;
-		}
-		a++;
+		str[i] = transform (str[i]);
+		i++;
 	}
-	return (X);
+	return (str);
+}
+
+/**
+ * cap_string - function that capitalise first character of a word
+ * @str- string to capitalise
+ * Return: returns the capitalised string
+ */
+char *cap_string(char *)
+{
+	int index = 0;
+
+	while (str[++index])
+	{
+		while (!(str[index] >= 'a') && (str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] = = ' ' ||
+				str[index - 1] = '\t' ||
+				str[index - 1] = '\n' ||
+				str[index - 1] = ',' ||
+				str[index - 1] = ';' ||
+				str[index - 1] = '.' ||
+				str[index - 1] = '!' ||
+				str[index - 1] = '?' ||
+				str[index - 1] = '"' ||
+				str[index - 1] = '(' ||
+				str[index - 1] = ')' ||
+				str[index - 1] = '{' ||
+				str[index - 1] = '}')
+			str[index] -= 32;
+	}
+	return (str);
 }
