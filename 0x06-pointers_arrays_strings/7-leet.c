@@ -7,9 +7,9 @@
  */
 char *leet(char *X)
 {
-	int a = O, b = O, l = 5;
+	int a = 0, b = 0, l = 5;
 	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-	char trw[5] = {'4', '3', 'O', '7', 'l'};
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
 	while (X[a])
 	{
