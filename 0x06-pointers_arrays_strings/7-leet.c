@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 
 /**
  * leet -> a leet function
