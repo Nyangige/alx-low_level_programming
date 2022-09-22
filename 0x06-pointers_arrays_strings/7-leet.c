@@ -6,13 +6,13 @@
  * @str: String to be encoded
  * Return: a string
  */
-char *leet(char *X)
+char *leet(char *str)
 {
 	int i = 0;
 
 	while (str[i] != '\0')
 	{
-		str[i] = transform (str[i]);
+		str[i] = transform(str[i]);
 		i++;
 	}
 	return (str);
@@ -23,7 +23,7 @@ char *leet(char *X)
  * @str- string to capitalise
  * Return: returns the capitalised string
  */
-char *cap_string(char *)
+char *cap_string(char *str)
 {
 	int index = 0;
 
@@ -32,7 +32,7 @@ char *cap_string(char *)
 		while (!(str[index] >= 'a') && (str[index] <= 'z'))
 			index++;
 
-		if (str[index - 1] = = ' ' ||
+		if (str[index - 1] = ' ' ||
 				str[index - 1] = '\t' ||
 				str[index - 1] = '\n' ||
 				str[index - 1] = ',' ||
