@@ -2,50 +2,29 @@
 
 
 /**
- * leet -> a leet function
+ * leet -> encodes a string into 1337
  * @str: String to be encoded
  * Return: a string
  */
 char *leet(char *str)
 {
-	int i = 0;
+	int stringCount, leetCount;
+	char leetLetters[] = "aAeEoOtTlL";
+	char leetNums[] = "4433007711";
 
-	while (str[i] != '\0')
+	stringCount = 0;
+	while (s[stringCount] != '\0')
 	{
-		str[i] = transform(str[i]);
-		i++;
+		leetCount = 0;
+		while (leetCount < 10)
+		{
+			if (leetLetters[leetCount] == s[stringCount])
+			{
+				s[stringCount] = leetNums[leetCount];
+			}
+			leetCount++;
+		}
+		stringCount++;
 	}
-	return (str);
-}
-
-/**
- * cap_string - function that capitalise first character of a word
- * @str- string to capitalise
- * Return: returns the capitalised string
- */
-char *cap_string(char *str)
-{
-	int index = 0;
-
-	while (str[++index])
-	{
-		while (!(str[index] >= 'a') && (str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] = ' ' ||
-				str[index - 1] = '\t' ||
-				str[index - 1] = '\n' ||
-				str[index - 1] = ',' ||
-				str[index - 1] = ';' ||
-				str[index - 1] = '.' ||
-				str[index - 1] = '!' ||
-				str[index - 1] = '?' ||
-				str[index - 1] = '"' ||
-				str[index - 1] = '(' ||
-				str[index - 1] = ')' ||
-				str[index - 1] = '{' ||
-				str[index - 1] = '}')
-			str[index] -= 32;
-	}
-	return (str);
+	return (s);
 }
